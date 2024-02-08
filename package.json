@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://lab.sodonsolution.com/npm-packages/public-packages/sodon-http"
+    "url": "https://github.com/Yormungand/sodon-http/import"
   },
   "keywords": [
     "Sodon-HTTP"
