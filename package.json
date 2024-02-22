@@ -1,6 +1,6 @@
 {
   "name": "sodon-http",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "\"Sodon-HTTP\" is a lightweight and flexible HTTP client for Node.js, designed to simplify and streamline HTTP requests. It provides an intuitive interface for making HTTP requests, handling responses, and managing headers effortlessly. With support for various HTTP methods and easy configuration, \"Sodon-HTTP\" is the ideal choice for developers seeking an efficient and developer-friendly solution for their Node.js projects.",
   "main": "index.js",
   "scripts": {
@@ -8,8 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Yormungand/sodon-http/import"
-
+    "url": "https://github.com/Yormungand/sodon-http"
   },
   "keywords": [
     "Sodon-HTTP"

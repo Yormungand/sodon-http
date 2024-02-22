@@ -1,4 +1,4 @@
-export const get = async function (url) {
+export const sodonGet = async function (url) {
     try {
         const response = await fetch(url, {
             credentials: 'include',
@@ -22,7 +22,8 @@ export const get = async function (url) {
             return {
                 success: false,
                 status,
-                message: jsonData.message || 'Unknown error'
+                message: jsonData.message || 'Unknown error',
+                payload: jsonData,
             }
         }
     } catch (e) {
@@ -31,11 +32,12 @@ export const get = async function (url) {
             success: false,
             status: 500,
             message: e.message || "Unknown error",
+            payload: e,
         }
     }
 }
 
-export const postJson = async function (url, data) {
+export const sodonPostJson = async function (url, data) {
     try {
         const response = await fetch(url, {
             credentials: "include",
@@ -62,6 +64,7 @@ export const postJson = async function (url, data) {
                 success: false,
                 status,
                 message: jsonData.message || "Unknown error",
+                payload: jsonData,
             }
         }
     } catch (e) {
@@ -70,11 +73,12 @@ export const postJson = async function (url, data) {
             success: false,
             status: 500,
             message: e.message || "Unknown error",
+            payload: e,
         }
     }
 }
 
-export const postForm = async function (url, form) {
+export const sodonPostForm = async function (url, form) {
     try {
         const response = await fetch(url, {
             method: "POST",
@@ -100,6 +104,7 @@ export const postForm = async function (url, form) {
                 success: false,
                 status,
                 message: jsonData.message || "Unknown error",
+                payload: jsonData,
             }
         }
     } catch (e) {
@@ -108,6 +113,26 @@ export const postForm = async function (url, form) {
             success: false,
             status: 500,
             message: e.message || "Unknown error",
+            payload: e,
         }
+    }
+}
+
+export const sodonPut = async (url, data) => {
+    try {
+        let object;
+        if (data && typeof data !== "object" && typeof data === "string"){
+            return {
+                success: false,
+                status: 0,
+                message: "Leave stringifying to me. Provide put data as object please",
+            }
+        }
+        const response = await fetch(url, {
+
+        });
+
+    } catch (e) {
+        console.warn(e);
     }
 }
