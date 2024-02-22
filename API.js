@@ -1,4 +1,4 @@
-export const sodonGet = async function (url) {
+export const get = async function (url) {
     try {
         const response = await fetch(url, {
             credentials: 'include',
@@ -37,7 +37,7 @@ export const sodonGet = async function (url) {
     }
 }
 
-export const sodonPostJson = async function (url, data) {
+export const postJson = async function (url, data) {
     try {
         const response = await fetch(url, {
             credentials: "include",
@@ -78,7 +78,7 @@ export const sodonPostJson = async function (url, data) {
     }
 }
 
-export const sodonPostForm = async function (url, form) {
+export const postForm = async function (url, form) {
     try {
         const response = await fetch(url, {
             method: "POST",
@@ -118,7 +118,7 @@ export const sodonPostForm = async function (url, form) {
     }
 }
 
-export const sodonPut = async (url, data) => {
+export const put = async (url, data) => {
     try {
         let object;
         if (data && typeof data !== "object" && typeof data === "string"){

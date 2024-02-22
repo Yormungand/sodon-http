@@ -2,11 +2,11 @@
 
 ## Get request example below:
 ```javascript
-import {sodonGet} from "sodon-http/API";
+import {get} from "sodon-http/API";
 
 const myFunction = async () => {
     try {
-        const response = await sodonGet("https://jsonplaceholder.typicode.com/todos");
+        const response = await get("https://jsonplaceholder.typicode.com/todos");
         if (response.success) {
             console.log("SUCCESS!", response.payload)
         } else {
@@ -21,7 +21,7 @@ const myFunction = async () => {
 ## Post JSON data as below
 
 ```javascript
-import {sodonPostJson} from "sodon-http/API"
+import {postJson} from "sodon-http/API"
 
 const myFunction = async () => {
     try {
@@ -30,7 +30,7 @@ const myFunction = async () => {
             body: "bar",
             userId: 2,
         }
-        const response = await sodonPostJson('https://jsonplaceholder.typicode.com/posts', form);
+        const response = await postJson('https://jsonplaceholder.typicode.com/posts', form);
         if (response.success) {
             console.log("SUCCESS", response.payload);
         } else {
